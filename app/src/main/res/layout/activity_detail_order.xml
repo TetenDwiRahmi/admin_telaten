@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/v_back"
+            android:backgroundTint="@color/hijau3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/cambay_bold"
+            android:text="Rincian Pesanan"
+            android:textColor="@color/colorBlack2"
+            android:textSize="20dp" />
+    </Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/frame1"
+        android:background="@drawable/line_shadow" />
+
+    <RelativeLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/hijau3" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/hijau3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgbatal"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/v_riwayat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/imgbatal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Dibatalkan"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/txtPembeli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Pembeli telah membatalkan pesanan ini."
+                        android:textColor="@color/colorWhite"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtPenjual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Penjual telah membatalkan pesanan ini."
+                        android:textColor="@color/colorWhite"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/keterangan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Alasan batal : "
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/waktubatal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Waktu dibatalkan : dd-mm-yyyy 00:00"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/hijau3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgSelesai"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/v_riwayat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/imgSelesai"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtStatus1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Selesai"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Pesanan sudah selesai."
+                        android:textColor="@color/colorWhite" />
+
+
+                    <TextView
+                        android:id="@+id/waktuSelesai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Waktu selesai : dd-mm-yyyy 00:00"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/hijau3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgDikemas"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/v_riwayat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/imgDikemas"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Dikemas"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Segera kemasi pesanan Pembeli."
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imglokasi"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/location" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/imglokasi"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtAlamatPenenerima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay_bold"
+                        android:text="Penerima"
+                        android:textColor="@color/hijau3"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/NamaPengirimDO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay"
+                            android:text="Nama Anda | "
+                            android:textColor="@color/colorBlack2" />
+
+                        <TextView
+                            android:id="@+id/NoHPPengirimDO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay"
+                            android:text="08xxxxxxxx"
+                            android:textColor="@color/colorBlack2" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/AlamatPengirimDO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Alamat Anda"
+                        android:textColor="@color/colorBlack2"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/KodePosDO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cambay"
+                        android:text="Kode Pos"
+                        android:textColor="@color/colorBlack2"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/context"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_shadow" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/imgmailman"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/mailman" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgmailman">
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/cambay_bold"
+                        android:text="Status Pengiriman"
+                        android:textColor="@color/hijau3"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/statusPembayaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/status"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/cambay"
+                        android:text="Segera Dikirim"
+                        android:textColor="@color/colorBlack2" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/context"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_shadow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Barang Pesanan"
+                android:textColor="@color/hijau3"
+                android:textSize="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/context"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_shadow" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/imgpay"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/payment" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutbayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgpay">
+
+                    <TextView
+                        android:id="@+id/metode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/cambay_bold"
+                        android:text="Metode Pembayaran"
+                        android:textColor="@color/hijau3"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/MetodePembayaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/metode"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/cambay"
+                        android:text="Transfer Bank"
+                        android:textColor="@color/colorBlack2" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/context"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_shadow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Detail Pembayaran"
+                android:textColor="@color/hijau3"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtSubTotalCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="SubTotal"
+                    android:textColor="@color/colorBlack2" />
+
+                <TextView
+                    android:id="@+id/HargaSubTotalDO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="Rp. 000"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlack2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtSubTotalPengiriman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="SubTotal Pengiriman"
+                    android:textColor="@color/colorBlack2" />
+
+                <TextView
+                    android:id="@+id/SubTotalPengirimanDO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="Rp. 000"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlack2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTotalPembayran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay_bold"
+                    android:text="Total Pembayaran"
+                    android:textColor="@color/colorBlack2" />
+
+                <TextView
+                    android:id="@+id/TotalPembayaranDO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay_bold"
+                    android:text="Rp. 000"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/line_shadow" />
+
+            <LinearLayout
+                android:id="@+id/TandaiLunas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay_bold"
+                    android:padding="5dp"
+                    android:text="Tandai Lunas"
+                    android:textAlignment="center"
+                    android:textColor="@color/biru2"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ceklis"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/v_check"
+                    android:backgroundTint="@color/biru2"
+                    android:paddingRight="10dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/SudahLunas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cambay_bold"
+                android:padding="5dp"
+                android:text="Lunas"
+                android:textAlignment="center"
+                android:textColor="@color/hijau"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/line_shadow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Detail Pemesanan"
+                android:textColor="@color/hijau3"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtNoPesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="No Pesanan"
+                    android:textColor="@color/colorBlack2" />
+
+                <TextView
+                    android:id="@+id/NoPesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="xxxxxxx"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlack2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTgl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="Tanggal Pemesanan"
+                    android:textColor="@color/colorBlack2" />
+
+                <TextView
+                    android:id="@+id/TglOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="dd-mm-yyy"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlack2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtJam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="Waktu Pemesanan"
+                    android:textColor="@color/colorBlack2" />
+
+                <TextView
+                    android:id="@+id/JamOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cambay"
+                    android:text="00:00:00"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlack2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtBukti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Bukti Transfer"
+                android:textColor="@color/hijau3"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_bukti"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/image_gray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btnBatal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/hijau3"
+                    android:fontFamily="@font/cambay"
+                    android:text="Batalkan Pesanan"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnBayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/hijau3"
+                    android:fontFamily="@font/cambay"
+                    android:text="Bayar Pesanan"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnKirim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/hijau3"
+                    android:fontFamily="@font/cambay"
+                    android:text="Kirim ke Pelanggan"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnDiambil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/hijau3"
+                    android:fontFamily="@font/cambay"
+                    android:text="Siap Diambil"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btnDiterima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/hijau3"
+                    android:fontFamily="@font/cambay"
+                    android:text="Pesanan Diterima"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnHub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@color/hijau3"
+                android:fontFamily="@font/cambay"
+                android:text="Hubungi Pembeli"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

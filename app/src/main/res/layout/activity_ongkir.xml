@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activity.OngkirActivity">
+
+        <include
+            layout="@layout/koneksi_bermasalah"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/layoutOngkir"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                tools:targetApi="lollipop">
+
+                <ImageView
+                    android:id="@+id/imageBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/v_back"
+                    android:backgroundTint="@color/hijau3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/cambay_bold"
+                    android:text="Atur Ongkir"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="20dp" />
+            </Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/frame1"
+                android:background="@drawable/line_shadow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_jarak1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imglokasi1"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/location" />
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="2dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/imglokasi1"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#bbb" />
+
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@id/imglokasi1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/jarak1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay_bold"
+                            android:text="0 Km - 0 Km"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tarif1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay_bold"
+                            android:text="Rp. 0"
+                            android:textColor="@color/hijau3"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="end">
+
+                        <ImageButton
+                            android:id="@+id/imageUpdate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/colorWhite"
+                            android:src="@drawable/edit" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_jarak2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_jarak1">
+
+                    <ImageView
+
+                        android:id="@+id/imglokasi2"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/location" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/imglokasi2"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#bbb" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@id/imglokasi2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/jarak2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay_bold"
+                            android:text="Tarif Minimum"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tarif2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay_bold"
+                            android:text="Rp. 0"
+                            android:textColor="@color/hijau3"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="end">
+
+                        <ImageButton
+                            android:id="@+id/imageUpdate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/colorWhite"
+                            android:src="@drawable/edit" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_jarak3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_jarak2">
+
+                    <ImageView
+
+                        android:id="@+id/imglokasi3"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/location" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@id/imglokasi3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/jarak3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay_bold"
+                            android:text="> 0 Km"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tarif3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cambay_bold"
+                            android:text="Rp. 0 / Km"
+                            android:textColor="@color/hijau3"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="end">
+
+                        <ImageButton
+                            android:id="@+id/imageUpdate3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/colorWhite"
+                            android:src="@drawable/edit" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDeskripsi"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="10dp"
+            android:background="@drawable/ic_dash"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cambay"
+                android:text="* Tarif minimum digunakan sebagai dasar untuk menetapkan tarif jarak minimum."
+                android:textColor="@color/colorBlack2"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cambay"
+                android:layout_gravity="center_horizontal|end"
+                android:text="* Jika jarak pengguna lebih besar dari jarak yang telah ditentukan, maka ongkos kirim bertambah sesuai pertambahan perKm."
+                android:textColor="@color/colorBlack2"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cambay"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:text="Ongkir = tarif minimum + ((jarak pengguna - jarak yang ditentukan) * tarif perKm)"
+                android:textColor="@color/colorBlack2"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

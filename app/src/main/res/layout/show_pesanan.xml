@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    tools:ignore="UseCompoundDrawables">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/txtID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cambay_bold"
+            android:gravity="left"
+            android:paddingStart="5dp"
+            android:text="No Pesanan"
+            android:textColor="@color/colorBlack" />
+
+
+        <TextView
+            android:id="@+id/Status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/txtID"
+            android:fontFamily="@font/cambay_bold"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:text="Segera Dikirim"
+            android:textColor="@color/hijau3" />
+
+        <TextView
+            android:id="@+id/idOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtID"
+            android:fontFamily="@font/cambay"
+            android:paddingStart="5dp"
+            android:text="030421585"
+            android:textColor="@color/colorGray2"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tglOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtID"
+            android:fontFamily="@font/cambay"
+            android:gravity="right"
+            android:paddingEnd="5dp"
+            android:text="20 - 05 - 2021"
+            android:textColor="@color/colorGray2"
+            android:textSize="15dp" />
+
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/idOrder"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorGray"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/context2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/namaCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cambay_bold"
+                android:gravity="left"
+                android:text="Nama Customer"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/metodepengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cambay_bold"
+                android:gravity="left"
+                android:text="Ambil sendiri"
+                android:textAlignment="textEnd"
+                android:textColor="@color/hijau3"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/context2"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/line_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/jumlahItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:fontFamily="@font/cambay"
+                        android:text="8 Item"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/totalHarga"
+                        android:layout_width="326dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cambay_bold"
+                        android:gravity="end"
+                        android:paddingStart="10dp"
+                        android:text="Rp. 20.000"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/statusLunas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative2"
+                android:fontFamily="@font/cambay_bold"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:text="Lunas"
+                android:textAlignment="center"
+                android:textColor="@color/hijau"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/statusBelumLunas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative2"
+                android:fontFamily="@font/cambay_bold"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:text="Belum Lunas"
+                android:textAlignment="center"
+                android:textColor="@color/colorRed2"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/context"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/line_shadow" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/variasi"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:fontFamily="@font/cambay"
+        android:text="Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor"
+        android:background="@drawable/table_content_cell_bg"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/harga"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@drawable/table_content_cell_bg"
+        android:fontFamily="@font/cambay"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/stock"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:fontFamily="@font/cambay"
+        android:background="@drawable/table_content_cell_bg"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/minBeli"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:fontFamily="@font/cambay"
+        android:background="@drawable/table_content_cell_bg"
+        android:textSize="15sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/aksi"-->
+<!--        android:layout_width="128dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="top"-->
+<!--        android:background="@drawable/table_content_cell_bg"-->
+<!--        android:textSize="18sp" />-->
+
+    <ImageButton
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:onClick="imageUpdate"
+        android:layout_column="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:src="@drawable/edit" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_column="1"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorWhite"
+        android:onClick="imageDelete"
+        android:src="@drawable/delete" />
+
+</LinearLayout>

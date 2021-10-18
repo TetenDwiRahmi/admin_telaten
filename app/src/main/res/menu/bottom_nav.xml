@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_nav"
+        android:icon="@drawable/v_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/pesanan_nav"
+        android:icon="@drawable/v_riwayat"
+        android:title="Penjualan" />
+    <item
+        android:id="@+id/customer_nav"
+        android:icon="@drawable/v_people"
+        android:title="Pelanggan" />
+    <item
+        android:id="@+id/akun_nav"
+        android:icon="@drawable/v_person"
+        android:title="Akun" />
+</menu>

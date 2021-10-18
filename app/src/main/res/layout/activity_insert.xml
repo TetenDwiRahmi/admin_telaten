@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.InsertActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/v_back"
+            android:backgroundTint="@color/hijau3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/cambay_bold"
+            android:text="Tambah Produk Baru"
+            android:textColor="@color/colorBlack2"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Pilih kategori yang tepat untuk produkmu."
+        android:textColor="@color/colorGray2"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Nama Produk"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editNamaItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/textbox"
+        android:fontFamily="@font/cambay"
+        android:hint="Masukkan nama produk"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/txtKategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Kategori"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorGray3"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerKategori"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            tools:listitem="@layout/show_produk_kategori"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTerpilih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cambay"
+        android:text="Kategori terpilih : Tidak ada yang dipilih"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnLanjut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/hijau3"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Lanjut"
+        android:textColor="@color/colorWhite" />
+</LinearLayout>

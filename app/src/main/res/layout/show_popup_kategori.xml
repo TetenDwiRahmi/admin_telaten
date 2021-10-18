@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="5dp">
+    <TableRow>
+        <TextView
+            android:id="@+id/nmCategori"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cambay"
+            android:padding="3dp"
+            android:text="Semua"
+            android:textColor="@color/colorBlack2"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageCeklis"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:background="@drawable/v_check"
+            android:paddingRight="10dp"
+            android:visibility="visible" />
+    </TableRow>
+</TableLayout>

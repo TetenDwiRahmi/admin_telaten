@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    tools:ignore="UseCompoundDrawables">
+
+
+    <RelativeLayout
+        android:id="@+id/contextKategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:id="@+id/kategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cambay_bold"
+            android:paddingStart="10dp"
+            android:text="Kategori"
+            android:textColor="@color/colorBlack2"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kategori">
+
+            <TextView
+                android:id="@+id/jml_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cambay"
+                android:paddingStart="10dp"
+                android:text="0 produk"
+                android:textColor="@color/colorGray2"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/update_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:src="@drawable/edit" />
+
+            <ImageButton
+                android:id="@+id/delete_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@color/colorWhite"
+                android:src="@drawable/delete" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/layout_kategori"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorGray"
+            android:orientation="vertical" />
+    </RelativeLayout>
+</LinearLayout>

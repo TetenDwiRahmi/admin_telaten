@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Variasi"
+        android:fontFamily="@font/cambay_bold"
+        android:textSize="15dp"
+        android:textColor="@color/colorBlack2"
+        />
+
+    <EditText
+        android:id="@+id/editVariasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cambay"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_textbox_black"
+        android:hint="Contoh : Merah"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cambay_bold"
+        android:textSize="15dp"
+        android:textColor="@color/colorBlack2"
+        />
+
+    <EditText
+        android:id="@+id/editHarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cambay"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_textbox_black"
+        android:hint="Contoh : 8000"
+        android:inputType="number"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stok"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cambay_bold"
+        android:textSize="15dp"
+        android:textColor="@color/colorBlack2"
+        />
+
+    <EditText
+        android:id="@+id/editStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cambay"
+        android:layout_marginTop="5dp"
+        android:inputType="number"
+        android:background="@drawable/ic_textbox_black"
+        android:hint="Contoh : 500"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min. pembelian"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cambay_bold"
+        android:textSize="15dp"
+        android:textColor="@color/colorBlack2"
+        />
+
+    <EditText
+        android:id="@+id/editPembelian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cambay"
+        android:layout_marginTop="5dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/ic_textbox_black"
+        android:hint="Contoh : 10"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15dp" />
+
+</LinearLayout>

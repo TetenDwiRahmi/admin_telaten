@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="black">#ff000000</color>
+    <color name="green">#1bb321</color>
+    <color name="hijau">#228B22</color>
+    <color name="biru">#C6DDD4</color>
+    <color name="coffee">#4B3619</color>
+    <color name="tortilla">#997950</color>
+    <color name="abu">#696969</color>
+    <color name="bg">#FBF7F7</color>
+    <color name="hijau1">#4A7375</color>
+    <color name="hijau2">#B7C7C7</color>
+    <color name="hijau3">#960019</color>
+    <color name="cream">#FDCEA3</color>
+    <color name="biru2">#1761AB</color>
+    <color name="colorYellow1">#ECBD07</color>
+    <color name="colorYellow2">#F9A826</color>
+    <color name="colorYellow3">#EAA836</color>
+    <color name="colorYellow4">#FFC529</color>
+    <color name="colorYellow5">#F0E68C</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorGray">#DADADA</color>
+    <color name="colorGray2">#808080</color>
+    <color name="colorGray3">#E3E4DF</color>
+    <color name="colorRed2">#FF0000</color>
+    <color name="colorBlack2">#272D2F</color>
+</resources>
